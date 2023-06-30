@@ -1,6 +1,6 @@
 import { printCategories } from './UI/printCategories.js'
 import '../styles/styles.scss'
-import { btnEdtitDelete, printProducts, printProductsFinder } from './UI/printProducts.js'
+import { printProducts, printProductsFinder } from './UI/printProducts.js'
 import { formLogin, inputSearch, login, shop } from './UI/domElements.js'
 import { handleSubmit } from './UI/loginView.js'
 import { shopReturn } from './UI/shopReturn.js'
@@ -27,7 +27,7 @@ formLogin.addEventListener('submit', (e) => {
     handleSubmit(e)
 })
 
-btnEdtitDelete()
+
 printCategories()
 printProducts()
 shopReturn()

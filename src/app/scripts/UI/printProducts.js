@@ -41,23 +41,20 @@ const renderProducts = (array) => {
         </section>
         `
     });
-    btnEdtitDelete();
-   
-}
 
-export const btnEdtitDelete = () => {
-    
-    const deleteProduct = productsContainer.querySelectorAll('.icon-delete')
-    const editProduct = productsContainer.querySelectorAll('.icon-edit')
     const containerBtn = productsContainer.querySelector('.icons-btn')
-    
-    return containerBtn;
+
+    const user = JSON.parse(sessionStorage.getItem("user")) || {};
+    console.log(user);
+
+    if (Object.entries(user).length === 0) {
+        console.log('aqui estoy')
+        containerBtn.classList.add('hidden');
+    } else {
+        containerBtn.classList.remove('hidden')
+    }
+
+
 }
 
-// export const btnEdtitDelete = () => {
-    
-//     productsContainer.addEventListener('click', (e) => {
-//        const deleteProduct = e.target.closest('.icon-delete')
-//        console.log(deleteProduct)
-//     })
-// }
+
